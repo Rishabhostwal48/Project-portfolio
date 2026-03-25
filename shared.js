@@ -1,59 +1,56 @@
-// Shared nav + footer + scroll behaviors
-
-// ── FOOTER HTML ──
+// ── FOOTER ──
 const footerHTML = `
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="index.html" class="nav-logo" style="display:inline-flex">
+      <a href="index.html" class="nav-logo" style="display:inline-flex;margin-bottom:4px">
         <img src="logo.png" alt="BondSure Infra" class="nav-logo-img">
-        <span class="nav-logo-text">BondSure <em>Infra</em></span>
+        <span class="nav-logo-text">BondSure <em>Infra Pvt. Ltd.</em></span>
       </a>
-      <p>Building India's infrastructure future since 1992. A trusted partner for government and private sector projects across Central India and beyond.</p>
+      <p>Engaged in the development and execution of infrastructure, industrial, and residential projects. Building reliable, sustainable communities across Central India.</p>
       <div class="social-links">
-        <a href="#" class="social-link">in</a>
-        <a href="#" class="social-link">fb</a>
-        <a href="#" class="social-link">tw</a>
-        <a href="#" class="social-link">yt</a>
+        <a href="#" class="social-link" title="LinkedIn">in</a>
+        <a href="#" class="social-link" title="Facebook">fb</a>
+        <a href="#" class="social-link" title="Instagram">ig</a>
+        <a href="#" class="social-link" title="WhatsApp">wa</a>
       </div>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
       <ul>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="management.html">Management Desk</a></li>
-        <li><a href="awards.html">Awards & Recognition</a></li>
-        <li><a href="journey.html">Our Journey</a></li>
-        <li><a href="careers.html">Careers</a></li>
+        <li><a href="services.html">What We Do</a></li>
+        <li><a href="machinery.html">Our Machinery</a></li>
+        <li><a href="vision.html">Vision & Mission</a></li>
+        <li><a href="clients.html">Our Clients</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Projects</h4>
+      <h4>Services</h4>
       <ul>
-        <li><a href="road-works.html">Road Works</a></li>
-        <li><a href="irrigation.html">Irrigation Projects</a></li>
-        <li><a href="housing.html">Housing & Buildings</a></li>
-        <li><a href="bridges.html">Bridges & Structures</a></li>
+        <li><a href="services.html#new-construction">New Construction</a></li>
+        <li><a href="services.html#rcc-road">RCC Road Construction</a></li>
+        <li><a href="services.html#repair">Building Repair</a></li>
+        <li><a href="services.html#diamond">Diamond Rope Cutting</a></li>
+        <li><a href="services.html#civil">Civil Services</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Quick Links</h4>
+      <h4>Contact</h4>
       <ul>
-        <li><a href="why-us.html">Why Choose Us</a></li>
-        <li><a href="safety.html">Safety & Execution</a></li>
-        <li><a href="partners.html">Our Partners</a></li>
-        <li><a href="culture.html">Culture</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="tel:9165160124">📞 9165160124</a></li>
+        <li><a href="mailto:bondsureinfra@gmail.com">✉ bondsureinfra@gmail.com</a></li>
+        <li style="color:rgba(255,255,255,0.5);font-size:.86rem;line-height:1.6">📍 320-324 DM Tower,<br>Near Janjeerwala Square,<br>Indore</li>
+        <li><a href="contact.html">Get a Quote →</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 BondSure Infra Pvt. Ltd. All Rights Reserved.</p>
-    <p>Crafted with precision for infrastructure excellence.</p>
+    <p>© 2026 BondSure Infra Private Limited. All Rights Reserved.</p>
+    <p>320-324 DM Tower, Near Janjeerwala Square, Indore</p>
   </div>
 </footer>`;
 
-// Inject footer
 const fp = document.getElementById('footer-placeholder');
 if (fp) fp.outerHTML = footerHTML;
 
@@ -61,17 +58,15 @@ if (fp) fp.outerHTML = footerHTML;
 const reveals = document.querySelectorAll('.reveal');
 const revObs = new IntersectionObserver((entries) => {
   entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 70);
-    }
+    if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 65);
   });
 }, { threshold: 0.08 });
 reveals.forEach(r => revObs.observe(r));
 
-// ── NAV SHRINK ON SCROLL ──
+// ── NAV SHRINK ──
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('navbar');
-  if (nav) nav.style.height = window.scrollY > 60 ? '60px' : '';
+  if (nav) nav.style.height = window.scrollY > 60 ? '62px' : '';
 });
 
 // ── HAMBURGER ──
@@ -83,7 +78,7 @@ function toggleMenu() {
   hb && hb.classList.toggle('open');
 }
 
-// ── ACTIVE NAV LINK ──
+// ── ACTIVE NAV ──
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a').forEach(a => {
   if (a.getAttribute('href') === currentPage) a.classList.add('active');
@@ -95,7 +90,8 @@ function handleSubmit(e) {
   const btn = e.target.querySelector('button[type=submit]');
   if (btn) {
     btn.textContent = '✓ Enquiry Sent!';
-    btn.style.background = '#2a6a2a';
-    setTimeout(() => { btn.textContent = 'Send Enquiry →'; btn.style.background = ''; }, 3500);
+    btn.style.background = '#1a5c1a';
+    btn.style.color = '#fff';
+    setTimeout(() => { btn.textContent = 'Send Enquiry →'; btn.style.background = ''; btn.style.color = ''; }, 3500);
   }
 }
