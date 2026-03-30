@@ -21,7 +21,7 @@ const footerHTML = `
         <a href="#" class="social-link" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="#" class="social-link" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="#" class="social-link" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://wa.me/919165160124" class="social-link" title="WhatsApp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://wa.me/91+919232018845" class="social-link" title="WhatsApp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </div>
     <div class="footer-col">
@@ -50,7 +50,7 @@ const footerHTML = `
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="tel:9165160124"><i class="fa-solid fa-phone" style="color:var(--gold);margin-right:6px"></i> 9165160124</a></li>
+        <li><a href="tel:+919232018845"><i class="fa-solid fa-phone" style="color:var(--gold);margin-right:6px"></i> +919232018845</a></li>
         <li><a href="mailto:info@bondsureinfra.com"><i class="fa-solid fa-envelope" style="color:var(--gold);margin-right:6px"></i> info@bondsureinfra.com</a></li>
         <li style="color:rgba(255,255,255,0.5);font-size:.86rem;line-height:1.6"><i class="fa-solid fa-location-dot" style="color:var(--gold);margin-right:6px"></i> 320-324 DM Tower,<br>Near Janjeerwala Square,<br>Indore</li>
         <li style="color:rgba(255,255,255,0.5);font-size:.86rem"><i class="fa-regular fa-clock" style="color:var(--gold);margin-right:6px"></i> Mon–Sat: 11:00 AM – 6:00 PM</li>

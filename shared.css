@@ -41,7 +41,9 @@ nav {
   transition: height .3s;
 }
 .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
-.nav-logo-img { height:50px; width:auto; filter:drop-shadow(0 2px 8px rgba(201,160,80,0.35)); }
+.nav-logo-img { height:50px; width:auto;
+   /* filter:drop-shadow(0 2px 8px rgba(201,160,80,0.35)); */
+   }
 .nav-logo-text {
   font-family:'Barlow Condensed',sans-serif;
   font-size:1.1rem; font-weight:700;
